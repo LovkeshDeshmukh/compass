@@ -64,6 +64,19 @@ const DataDisplay = () => {
   };
   const [editData, setEditData] = useState("");
   const [editId, setEditId] = useState("");
+  const [delMul, setDelMul] = useState(false);
+  const [delIds, setDelIds] = useState([]);
+  const delMulFn = () => {
+    axios
+      .post(`http://localhost:5001/${showData}/deletemultiple`, {
+        ids: delIds,
+      })
+      .then(() => {
+        setDelIds([]);
+        getdata();
+        setDelMul(false);
+      });
+  };
   return (
     <>
       {editData !== "" ? (
@@ -203,12 +216,22 @@ const DataDisplay = () => {
           <div className="card p-2 position-relative">
             {showData}
             {showData ? <button onClick={() => addData()}>+Add</button> : null}
+            {showData ? (
+              <button onClick={() => setDelMul(true)}>delete multiple</button>
+            ) : null}
+            {delMul ? <button onClick={() => delMulFn()}>Delete</button> : null}
 
             {/* {items.map((i, index) => (<div>{JSON.stringify(i.pincodeData)}</div>))} */}
             <div className="col">
               {items[showData]?.map((i) => (
                 <>
                   <div style={{ right: "20px", position: "absolute" }}>
+                    {delMul ? (
+                      <input
+                        type="checkbox"
+                        onClick={() => setDelIds([...delIds, i.id])}
+                      />
+                    ) : null}
                     {editId !== i.id ? (
                       <button onClick={() => setEditId(i.id)}>
                         <i class="bi bi-pencil-square mx-2"></i>

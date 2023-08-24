@@ -1,0 +1,35 @@
+{
+  "pincodeData": [
+    {
+      "id": 504214,
+      "districtName": "Adilabad",
+      "stateName": "ANDHRA PRADESH",
+      "test": [
+        { "abc": "1", "xyz": "fyte" },
+        { "abc": "2", "xyz": "werh" }
+      ]
+    },
+    {
+      "id": 504312,
+      "districtName": "Adilabaahv76347234cjdcd",
+      "stateName": "ANDHRA PRADESH",
+      "surname": "hi"
+    },
+    {
+      "id": 504201,
+      "districtName": "Adilabhsiudvbkjvbad",
+      "stateName": "ANDHRA PRADESH"
+    },
+    {
+      "id": 504206,
+      "districtName": "Adilabadsdchjskjdbc",
+      "stateName": "ANDHRA PRADESH"
+    },
+    { "id": "c54ebd64-00d1-405b-aa88-80df06bab577" },
+    {
+      "id": "77e8d3f1-1916-45f7-88a9-63c674cde438",
+      "name": "77e8d3f1-1916-45f7-88a9-63c674cde438"
+    }
+  ],
+  "Student": []
+}
